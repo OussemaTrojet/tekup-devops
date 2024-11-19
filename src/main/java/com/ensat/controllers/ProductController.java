@@ -23,7 +23,7 @@ public class ProductController {
      * @param model
      * @return
      */
-   @GetMapping("/")
+   @GetMapping
     public String list(Model model) {
         model.addAttribute("products", productService.listAllProducts());
         System.out.println("Returning products:");
