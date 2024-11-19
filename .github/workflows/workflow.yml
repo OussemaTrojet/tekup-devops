@@ -37,3 +37,15 @@ jobs:
 
       - name: Run Docker container
         run: docker run -d -p 8080:8080 springboot-crud-demo
+
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: wissem.lemsi@esprit.tn
+          password: Ronaldo@23
+          subject: CI/CD Pipeline Completed
+          body: The CI/CD pipeline has completed successfully.
+          to: oussema.trojet1@gmail.com
+          from: wissem.lemsi@esprit.tn
