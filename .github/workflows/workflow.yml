@@ -30,13 +30,13 @@ jobs:
         run: mvn test
 
       - name: SonarQube Scan
-        run: mvn sonar:sonar -Dsonar.projectKey=springboot-crud-demo -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sqa_32ef4e92653420bf82dccb6aec747cea41f3a5f4
+        run: mvn sonar:sonar -Dsonar.projectKey=springboot-thymeleaf-crud-web-app -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sqa_32ef4e92653420bf82dccb6aec747cea41f3a5f4
 
       - name: Build Docker image
-        run: docker build -t springboot-crud-demo .
+        run: docker build -t springboot-thymeleaf-crud-web-app .
 
       - name: Run Docker container
-        run: docker run -d -p 8080:8080 springboot-crud-demo
+        run: docker run -d -p 8080:8080 springboot-thymeleaf-crud-web-app
 
       - name: Send email notification
         uses: dawidd6/action-send-mail@v3
