@@ -30,7 +30,7 @@ jobs:
         run: mvn test
 
       - name: SonarQube Scan
-        run: mvn sonar:sonar -Dsonar.projectKey=springboot-thymeleaf-crud-web-app -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sqa_32ef4e92653420bf82dccb6aec747cea41f3a5f4
+        run: mvn sonar:sonar -Dsonar.projectKey=springboot-thymeleaf-crud-web-app -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sqp_6088ea1d5fe2920c62dfc5719cd59e2d0f0f7174
 
       - name: Build Docker image
         run: docker build -t springboot-thymeleaf-crud-web-app .
