@@ -1,10 +1,6 @@
-FROM tomcat:9
+FROM eclipse-temurin:17-jdk-alpine
+VOLUME /tmp
+COPY target/*.war app.war
 
-
-ADD target/springboot-thymeleaf-crud-web-app-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/
-ADD src/main/resources/application.properties /usr/local/tomcat/
-ADD springboot-thymeleaf-crud-web-app-0.0.1-SNAPSHOT.xml /usr/local/tomcat/conf/Catalina/localhost/
-
-
-EXPOSE 8080
-CMD ["catalina.sh", "run"]
+# Set the PATH environment variable to include LibreOffice
+ENTRYPOINT ["java","-jar","/app.war"]
