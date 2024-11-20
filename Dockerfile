@@ -1,4 +1,3 @@
-FROM openjdk:17-jdk-slim
+FROM tomcat:9.0-jdk17-openjdk-slim
 ARG WAR_FILE=target/*.war
-COPY ${WAR_FILE} app.war
-ENTRYPOINT ["java","-jar","/app.war"]
+COPY ${WAR_FILE} /usr/local/tomcat/webapps/app.war

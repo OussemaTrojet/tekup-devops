@@ -82,16 +82,13 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
+				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<archive>
-						<manifest>
-							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-							<mainClass>crud.springboot.SpringbootThymeleafCrudWebAppApplication</mainClass>
-						</manifest>
-					</archive>
+					<source>16</source>
+					<target>16</target>
 				</configuration>
 			</plugin>
 		</plugins>
