@@ -7,3 +7,4 @@ ADD springboot-thymeleaf-crud-web-app-0.0.1-SNAPSHOT.xml /usr/local/tomcat/conf/
 
 
 EXPOSE 8080
+CMD ["catalina.sh", "run"]
